@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Logo from "../../assets/Logo";
-import { Container, FormContainer, TrackItInput, BlueButton } from "../shared/styled-component/styled-components"
+import { Container, FormContainer, BlueButton } from "./style"
+import {TrackItInput} from "../../shared/styled-component/style"
 
 export default function LogIn() {
     return (

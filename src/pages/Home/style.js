@@ -18,15 +18,6 @@ grid-row-gap: 6px;
 margin-top:32px;
 
 `
-
-const TrackItInput = styled.input`
-height: 45px;
-border: 1px solid #D5D5D5;
-padding-left:11px;
-::placeholder{
-    font-size:20px;
-}
-`
 const BlueButton = styled.button`
 background: #52B6FF;
 color: #FFFFFF;
@@ -36,4 +27,4 @@ border:none;
 border-radius:5px;
 
 `
-export { Container, FormContainer, TrackItInput, BlueButton }
+export { Container, FormContainer, BlueButton }
