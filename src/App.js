@@ -1,9 +1,10 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import LogIn from "./pages/Home/LogIn";
 import SignUp from "./pages/Home/SingUp";
-import Habits from "./pages/Dashboard/Habits";
-import "./assets/styles/reset.css"
-import "./assets/styles/app.css"
+import Habits from "./pages/Dashboard/Habits/Habits";
+import Today from "./pages/Dashboard/Today/Today";
+import "./assets/styles/reset.css";
+import "./assets/styles/app.css";
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
         </Route>
         <Route exact path="/habitos">
           <Habits />
+        </Route>
+        <Route exact path="/hoje">
+          <Today />
         </Route>
       </Switch>
     </Router>

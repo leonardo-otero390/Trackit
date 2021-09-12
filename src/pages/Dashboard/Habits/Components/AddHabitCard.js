@@ -1,4 +1,4 @@
-import { TrackItInput } from "../../../shared/styled-component/style";
+import { TrackItInput } from "../../../../shared/styled-component/style";
 import styled from "styled-components";
 import WeekDayOptions from "./WeekDayOptions";
 
@@ -17,9 +17,9 @@ export default function AddHabitCard() {
                     </li>
                 </CardButtons>
             </AddHabitCardStyled>
-            <p>
+            <AddAlert>
                 Você não tem nenhum hábito cadastrado ainda. Adicione um hábito para começar a trackear!
-            </p>
+            </AddAlert>
         </>
     );
 }
@@ -60,4 +60,9 @@ const CancelButton = styled.button`
 color:#52B6FF;
 background:none;
 border:none;
+`
+const AddAlert = styled.p`
+color:#666666;
+        font-size:18px;
+        line-height:22px;
 `
