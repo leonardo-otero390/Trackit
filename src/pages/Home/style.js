@@ -11,7 +11,7 @@ h4{
     font-size:14px;
 }
 `
-const FormContainer = styled.div`
+const FormContainer = styled.form`
 width:100%;
 display: grid;
 grid-row-gap: 6px;
@@ -19,12 +19,16 @@ margin-top:32px;
 
 `
 const BlueButton = styled.button`
-background: #52B6FF;
+
+background: ${props=>props.isLoading? " #52B6FF": "#52B6FF"};
 color: #FFFFFF;
 font-size:20px;
 height: 45px;
 border:none;
 border-radius:5px;
+display:flex;
+justify-content: center;
+align-items: center;
 
 `
 export { Container, FormContainer, BlueButton }
