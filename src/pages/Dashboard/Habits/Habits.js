@@ -5,7 +5,6 @@ import Header from "../shared/components/Header";
 import { Body, Container } from "../shared/styled-component/style";
 import { TitlePage, BlueButton } from "./style";
 
-
 export default function Habits() {
     return (
         <Body>

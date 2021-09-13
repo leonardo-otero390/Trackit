@@ -1,9 +1,14 @@
 import styled from "styled-components";
+import React, { useContext } from "react";
+import UserContext from "../../../../contexts/UserContext";
+
 export default function Header() {
+    const { userData} = useContext(UserContext);
+    const {image} = userData;
     return (
         <TopBar>
             <h1>TrackIt</h1>
-            <img src="https://http2.mlstatic.com/D_NQ_NP_640775-MLB40939406782_022020-O.jpg" alt="vovo" />
+            <img src={image} alt="avatar" />
         </TopBar>
     );
 }

@@ -2,12 +2,16 @@ import axios from "axios";
 
 const API_URL = "https://mock-api.bootcamp.respondeai.com.br/api/v2/trackit/auth";
 
-function RequestLogIn(request, history, setLoading) {
+function RequestLogIn(request, history, setFunctions) {
+    const {setLoading,setUserData} = setFunctions;
     setLoading(true);
     axios.post(API_URL + "/login", request)
-        .then(() => history.push("/hoje"))
+        .then((res) => {
+            setUserData(res.data);
+            history.push("/hoje");
+        })
         .catch(() => {
-            alert("Não foi possível realizar o cadastro");
+            alert("Não foi possível conectar");
             setLoading(false);
         })
 }
