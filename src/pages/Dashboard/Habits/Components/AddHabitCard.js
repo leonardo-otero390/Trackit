@@ -17,9 +17,6 @@ export default function AddHabitCard() {
                     </li>
                 </CardButtons>
             </AddHabitCardStyled>
-            <AddAlert>
-                Você não tem nenhum hábito cadastrado ainda. Adicione um hábito para começar a trackear!
-            </AddAlert>
         </>
     );
 }
@@ -60,9 +57,4 @@ const CancelButton = styled.button`
 color:#52B6FF;
 background:none;
 border:none;
-`
-const AddAlert = styled.p`
-color:#666666;
-        font-size:18px;
-        line-height:22px;
 `

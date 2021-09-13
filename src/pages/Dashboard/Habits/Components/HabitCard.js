@@ -1,13 +1,22 @@
+import { useContext } from "react";
 import { TrashOutline } from "react-ionicons";
 import styled from "styled-components";
+import UserContext from "../../../../contexts/UserContext";
+import { RequestDeleteHabit } from "../../../../Services/API";
 import WeekDayOptions from "./WeekDayOptions";
 
-export default function HabitCard() {
+export default function HabitCard({ id, name, days, setHabits }) {
+    const { userData } = useContext(UserContext);
+    const { token } = userData;
+    function DeleteHabit() {
+        const confirm = prompt("Digite sim para deletar");
+        if (confirm === "sim") RequestDeleteHabit(id, token, setHabits);
+    }
     return (
         <HabitCardStyled>
-            <h1>Habit Title</h1>
-            <WeekDayOptions />
-            <DeleteButton>
+            <h1>{name}</h1>
+            <WeekDayOptions daysOn={days} />
+            <DeleteButton onClick={DeleteHabit}>
                 <TrashOutline
                     color={'#666666'}
                     width="15px"

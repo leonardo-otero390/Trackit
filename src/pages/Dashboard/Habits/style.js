@@ -16,4 +16,9 @@ display:flex;
 align-items: center;
 justify-content: center;
 `
-export {TitlePage, BlueButton}
+const AddAlert = styled.p`
+color:#666666;
+        font-size:18px;
+        line-height:22px;
+`
+export {TitlePage, BlueButton, AddAlert}
